@@ -1,5 +1,3 @@
-/* ── Место SPA · светлая палитра с золотом ─────────────────────── */
-
 :root {
 	--cream: #fbf7ef;
 	--cream-deep: #f5eee0;
@@ -589,33 +587,20 @@ h2 {
 }
 
 .stars {
-	position: relative;
-	display: block;
-	width: 84px;
-	height: 16px;
+	display: flex;
+	gap: 3px;
 }
 
-.stars-svg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 84px;
-	height: 16px;
-}
-
-.stars > .stars-svg:first-child {
+.star {
+	width: 15px;
+	height: 15px;
 	fill: rgba(185, 149, 68, 0.22);
 }
-
-.stars-on {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	overflow: hidden;
-}
-.stars-on .stars-svg {
+.star.on {
 	fill: var(--gold);
+}
+.star.half {
+	fill: url(#star-half);
 }
 
 .review-text {
